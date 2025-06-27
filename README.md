@@ -7,47 +7,44 @@ PulmoCarcinCrusade is a computer-aided diagnosis (CAD) system that empowers earl
 🧠 Technologies & Models Used
 Dataset: IQ-OTH/NCCD (CT scans from Iraq Oncology Teaching Hospital)
 
-Machine Learning:
+**Machine Learning:**
 
-Support Vector Machine (SVM) with handcrafted Gabor + GLCM features
+  Support Vector Machine (SVM) with handcrafted Gabor + GLCM features
+  
+  Ensemble Model: SVM + Random Forest + Gradient Boosting (Soft Voting)
 
-Ensemble Model: SVM + Random Forest + Gradient Boosting (Soft Voting)
+**Deep Learning:**
 
-Deep Learning:
+  Convolutional Neural Network (CNN) for automatic feature extraction and classification
+  
+  Staging: Texture-based GLCM analysis for Stage I–IV detection in abnormal cases
 
-Convolutional Neural Network (CNN) for automatic feature extraction and classification
+**Preprocessing:**
 
-Staging: Texture-based GLCM analysis for Stage I–IV detection in abnormal cases
+  Bit-plane slicing
+  Gaussian filtering
+  Erosion
+  SMOTE (Synthetic Minority Over-sampling Technique)
+  PCA (Principal Component Analysis)
 
-Preprocessing:
+**🧪 Features**
+  ✅ Lung cancer classification: Normal, Benign, Malignant
+  
+  🔬 Stage-wise classification: Stage 1 to Stage 4 (for abnormal cases)
+  
+  🎯 Multiple model comparison: SVM vs Ensemble vs CNN
+  
+  📈 Evaluation Metrics: Accuracy, Precision, Recall, F1-Score
+  
+  📊 CNN achieved 100% accuracy on test data
+  
 
-Bit-plane slicing
-
-Gaussian filtering
-
-Erosion
-
-SMOTE (Synthetic Minority Over-sampling Technique)
-
-PCA (Principal Component Analysis)
-
-🧪 Features
-✅ Lung cancer classification: Normal, Benign, Malignant
-
-🔬 Stage-wise classification: Stage 1 to Stage 4 (for abnormal cases)
-
-🎯 Multiple model comparison: SVM vs Ensemble vs CNN
-
-📈 Evaluation Metrics: Accuracy, Precision, Recall, F1-Score
-
-📊 CNN achieved 100% accuracy on test data
-
-🏗️ Project Architecture
-🔹 ML/Ensemble Model
-Image preprocessing → Feature extraction (GLCM + Gabor) → PCA → SMOTE → Classification using SVM, RF, GB
-
-🔹 CNN Model
-Preprocessed CT images → CNN training → Classification → GLCM-based staging
+🏗️ **Project Architecture**
+  🔹 ML/Ensemble Model
+    Image preprocessing → Feature extraction (GLCM + Gabor) → PCA → SMOTE → Classification using SVM, RF, GB
+    
+  🔹 CNN Model
+    Preprocessed CT images → CNN training → Classification → GLCM-based staging
 
 Model      	Accuracy	Precision	Recall	F1-Score
 SVM	        ~89.9%	    0.88      	0.87	0.87
