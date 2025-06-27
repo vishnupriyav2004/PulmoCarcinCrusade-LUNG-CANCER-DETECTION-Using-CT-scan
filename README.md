@@ -1,0 +1,2 @@
+# PulmoCarcinCrusade-LUNG-CANCER-DETECTION-Using-CT-scan
+PulmoCarcinCrusade is an AI-powered diagnostic system that automates the detection and stage classification of lung cancer using CT scan images. It combines traditional machine learning (SVM, Ensemble) with deep learning (CNN) to classify cases as Normal, Benign, or Malignant, and further identifies the cancer stage (I–IV) in abnormal cases.
